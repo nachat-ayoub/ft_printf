@@ -13,7 +13,6 @@
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 # include <stdarg.h>
-# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 
@@ -23,6 +22,6 @@ void	ft_putstr(char *s, int *count);
 void	ft_putnbr(int n, int *count);
 void	ft_putnbr_uns(unsigned int n, int *count);
 void	ft_putnbr_hex(unsigned int n, int *count, char sp);
-void	ft_putnbr_adrs(unsigned long long n, int *count);
+void	ft_putnbr_adrs(unsigned long n, int *count);
 
 #endif

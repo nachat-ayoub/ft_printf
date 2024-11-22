@@ -28,7 +28,8 @@ static void	print_format(char sp, va_list args, int *count)
 		ft_putnbr_hex(va_arg(args, unsigned int), count, sp);
 	else if (sp == 'p')
 	{
-		ft_putnbr_adrs(va_arg(args, unsigned long long), count);
+		ft_putstr("0x", count);
+		ft_putnbr_adrs(va_arg(args, unsigned long), count);
 	}
 	else
 		ft_putchar(sp, count);
@@ -40,6 +41,8 @@ int	ft_printf(const char *s, ...)
 	int		count;
 	size_t	i;
 
+	if (write(1, "", 0) == -1)
+		return (-1);
 	va_start(args, s);
 	i = 0;
 	count = 0;

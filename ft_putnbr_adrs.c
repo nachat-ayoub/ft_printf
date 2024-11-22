@@ -6,20 +6,14 @@
 /*   By: anachat <anachat@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 16:37:24 by anachat           #+#    #+#             */
-/*   Updated: 2024/11/20 16:37:26 by anachat          ###   ########.fr       */
+/*   Updated: 2024/11/21 16:44:02 by anachat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putnbr_adrs(unsigned long long n, int *count)
+void	ft_putnbr_adrs(unsigned long n, int *count)
 {
-	if(n == NULL)
-	{
-		ft_putstr("(nil)", count);
-		return ;
-	}
-	ft_putstr("0x", count);
 	if (n < 16)
 		ft_putchar("0123456789abcdef"[n], count);
 	else
